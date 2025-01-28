@@ -1,13 +1,11 @@
 import { useState } from "react";
 
 
-export default function Search({ setFilter }) {
-  const [filterParam, setFilterParam] = useState("All");
-
+export default function Search({ setFilter, filter }) {
+  
     // Actualizamos el estado del filtro en el componente principal
     const handleFilterChange = (e) => {
         const selectedCategory = e.target.value;
-        setFilterParam(selectedCategory);
         setFilter(selectedCategory); // Llamamos a la función que nos pasa App
       };
 
@@ -16,7 +14,7 @@ export default function Search({ setFilter }) {
     <div className="custom-select-wrapper">
       <select
         onChange={handleFilterChange}
-        value={filterParam}
+        value={filter}
         className="custom-select"
         aria-label="Filter Products By Category"
       >

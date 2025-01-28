@@ -55,7 +55,8 @@ const { currentPage, pageCount, paginate, handlePageChange } = usePagination(fil
       <main className="container-xl mt-5">
         <h3 className="text-center">Nuestra Colección</h3>
         <div className="row g-3">
-          <Search setFilter={setFilter} /> {/* Pasamos la función setFilter */}
+          <Search setFilter={setFilter} 
+          filter={filter}/> {/* Pasamos la función setFilter */}
           <Routes>
             {/* Ruta para el listado de productos */}
             <Route
