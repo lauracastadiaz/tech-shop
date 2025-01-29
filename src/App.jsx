@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
 import ProductsDetails from "./components/ProductsDetails";
 import Header from "./components/Header";
@@ -31,11 +31,13 @@ function App() {
   // State para el filtro
   const [filter, setFilter] = useState("All");
 
+
   // Filtramos los productos según la categoría seleccionada
   const filteredProducts =
     filter === "All"
       ? data // si el filtro es All mostramos todos los productos
-      : data.filter((item) => item.categories.name === filter); // Filtramos según la categoría
+      : data.filter((item) => 
+        item.categories.name  === filter); // Filtramos según la categoría
 
 // Usamos el hook usePagination con los productos filtrados
 const pageSize = 6;
@@ -52,10 +54,12 @@ const { currentPage, pageCount, paginate, handlePageChange } = usePagination(fil
         isEmpty={isEmpty}
         cartTotal={cartTotal}
       />
+     
       <main className="container-xl mt-5">
         <h3 className="text-center">Nuestra Colección</h3>
         <div className="row g-3">
-          <Search setFilter={setFilter} 
+          <Search 
+          setFilter={setFilter} 
           filter={filter}/> {/* Pasamos la función setFilter */}
           <Routes>
             {/* Ruta para el listado de productos */}

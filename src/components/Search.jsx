@@ -1,12 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 
 
 export default function Search({ setFilter, filter }) {
   
+  // State para almacenar las categorias obtenidas de la API
+  const[categories, setCategories] = useState([]);
+
+  // useEffect para llamar a la API y obtener categorias
+useEffect(() => {
+  const fetchCategories = async () => {
+    try{
+      const response = await fetch("https://cms-ecommerce-production.up.railway.app/api/categories");
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+      const result = await response.json();
+        setCategories(result.data); // guardar los datos de la API en el state
+      } catch (error){
+      console.error("Error fetching categories:", error)
+    }
+  };
+  fetchCategories()
+}, []);
+
+
+
     // Actualizamos el estado del filtro en el componente principal
     const handleFilterChange = (e) => {
-        const selectedCategory = e.target.value;
-        setFilter(selectedCategory); // Llamamos a la función que nos pasa App
+        setFilter(e.target.value); // Llamamos a la función que nos pasa App
       };
 
   
@@ -19,11 +38,13 @@ export default function Search({ setFilter, filter }) {
         aria-label="Filter Products By Category"
       >
         <option value="All">Filter By Category</option>
-        <option value="Laptop">Laptop</option>
-        <option value="Desktop">Desktop</option>
-        <option value="Smartphones">Smartphones</option>
-        <option value="Videogames">Videogames</option>
-        <option value="Photography">Photography</option>
+        {categories.map((category) => (
+          <option 
+          key={category.id} 
+          value={category.name}>
+            {category.name}
+          </option>
+        ))}
       </select>
       <span className="focus"></span>
     </div>
