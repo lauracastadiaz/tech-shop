@@ -89,13 +89,13 @@ npm run dev
 Abre tu navegador y visita `http://localhost:3000` para ver la tienda en funcionamiento.
 
 ### Autores: 
-Laura Castaño
+👩‍💻 Laura Castaño
 
-Víctor Márquez
+👨‍💻 Víctor Márquez
 
 
+### **Licencia** 📄
 
-Licencia 📄
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
 
 Tech Shop es un proyecto en constante evolución. ¡Gracias por visitar y apoyar el desarrollo! 🚀
