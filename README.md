@@ -18,6 +18,7 @@ El proyecto se encuentra en desarrollo y actualmente cuenta con las siguientes f
 - **API personalizada**: Desarrollada con Strapi para gestionar productos, categorías y pedidos.
 - **Estilos personalizados**: Uso de CSS para personalizar la apariencia de la tienda.
 - **Rendimiento optimizado**: Gracias a Vite, la aplicación tiene un tiempo de carga rápido.
+- **LocalStorage**: Almacena el carrito de compras en el navegador, asegurando su persistencia incluso después de cerrar la página o el navegador.
 
 ## Tecnologías utilizadas 💻
 
