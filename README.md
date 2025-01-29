@@ -26,7 +26,9 @@ El proyecto se encuentra en desarrollo y actualmente cuenta con las siguientes f
 - **Bootstrap v5.2.3**: Framework de CSS para diseñar componentes responsive. 
 - **Strapi**: Headless CMS para crear y gestionar la API.
 - **CSS personalizado**: Estilos adicionales para personalizar la apariencia. Estilos personalizados diseñados específicamente para el proyecto y variables y fragmentos reutilizados de Bootstrap.
-- **Librerías**: Para el spinner -> `https://uiball.com/ldrs/` *(midudev)*
+
+**Librerías**: 
+- Para el spinner -> `https://uiball.com/ldrs/` *(midudev)*
 - Para la alerta al pulsar '*agregar al carrito*' -> React-Toastify () -> `https://www.npmjs.com/package/react-toastify`
   
 ## Funcionalidades actuales ✅
