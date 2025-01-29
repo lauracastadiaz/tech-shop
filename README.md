@@ -89,8 +89,10 @@ npm run dev
 Abre tu navegador y visita `http://localhost:3000` para ver la tienda en funcionamiento.
 
 ### Autores: 
-Víctor Márquez
 Laura Castaño
+
+Víctor Márquez
+
 
 
 Licencia 📄
