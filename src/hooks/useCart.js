@@ -30,7 +30,7 @@ function useCart() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://cms-ecommerce-production.up.railway.app/api/products?populate[categories]=*&populate=images"
+          "https://cms-ecommerce-zr2f.onrender.com/api/products?populate[categories]=*&populate=images"
         ); //URL de la API
         if (!response.ok) throw new Error("Error al cargar los datos");
         const result = await response.json();

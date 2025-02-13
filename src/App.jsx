@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useState , useEffect} from "react";
+import { useState } from "react";
 
 import ProductsDetails from "./components/ProductsDetails";
 import Header from "./components/Header";

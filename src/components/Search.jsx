@@ -10,7 +10,7 @@ export default function Search({ setFilter, filter }) {
 useEffect(() => {
   const fetchCategories = async () => {
     try{
-      const response = await fetch("https://cms-ecommerce-production.up.railway.app/api/categories");
+      const response = await fetch("https://cms-ecommerce-zr2f.onrender.com/api/categories");
       if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const result = await response.json();
         setCategories(result.data); // guardar los datos de la API en el state
